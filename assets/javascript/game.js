@@ -42,11 +42,9 @@ $(document).ready(function () {
                     }
                 },
                 hide: function () {
-                    // console.log("hidden " + ref)
                     $(this.$ref).addClass("hidden");
                 },
                 show: function () {
-                    // console.log("shown " + ref)
                     $(this.$ref).removeClass("hidden");
                 }
             };
