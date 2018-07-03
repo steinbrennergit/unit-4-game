@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Linking Bootstrap 4.1.1 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+
+    <!-- Linking my CSS -->
+    <link rel="stylesheet" href="assets/style.css">
+
+    <title>Unit 4 Game</title>
+</head>
+
+<body>
+
+    <div class="jumbotron" id="play-space">
+        <div id="player-area">
+            <div class="row">
+                <div class="col">
+                    <img src="http://img4.wikia.nocookie.net/__cb20140328190757/pokemon/images/thumb/2/21/001Bulbasaur.png/200px-001Bulbasaur.png"
+                        alt="" class="char-portrait player-char" id="player-1">
+                </div>
+                <div class="col">
+                    <img src="http://img4.wikia.nocookie.net/__cb20140724195345/pokemon/images/thumb/7/73/004Charmander.png/200px-004Charmander.png"
+                        alt="" class="char-portrait player-char" id="player-2">
+                </div>
+                <div class="col">
+                    <img src="http://img1.wikia.nocookie.net/__cb20140328191525/pokemon/images/thumb/3/39/007Squirtle.png/200px-007Squirtle.png"
+                        alt="" class="char-portrait player-char" id="player-3">
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <h4 class="col-4 text-display" id="player-stats">Player stats go here</h4>
+                <button class="col-3" id="attack">Attack</button>
+                <h4 class="col-4 text-display" id="opponent-stats">Opponent stats go here</h4>
+            </div>
+            <hr>
+            <div id="opponent-area">
+                <div class="row">
+                    <div class="col">
+                        <img src="http://img4.wikia.nocookie.net/__cb20140328190757/pokemon/images/thumb/2/21/001Bulbasaur.png/200px-001Bulbasaur.png"
+                            alt="" class="char-portrait opponent-char" id="attack-1">
+                    </div>
+                    <div class="col">
+                        <img src="http://img4.wikia.nocookie.net/__cb20140724195345/pokemon/images/thumb/7/73/004Charmander.png/200px-004Charmander.png"
+                            alt="" class="char-portrait opponent-char" id="attack-2">
+                    </div>
+                    <div class="col">
+                        <img src="http://img1.wikia.nocookie.net/__cb20140328191525/pokemon/images/thumb/3/39/007Squirtle.png/200px-007Squirtle.png"
+                            alt="" class="char-portrait opponent-char" id="attack-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="jumbotron" id="attack-results">
+            
+        </div>
+
+
+
+        <!-- Linking JQuery and Bootstrap JS components -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+            crossorigin="anonymous"></script>
+
+        <!-- Linking my JS -->
+        <script src="assets/app.js"></script>
+</body>
+
+</html>
