@@ -1,3 +1,7 @@
+// linked to from https://steinbrennergit.github.io/bootstrap-portfolio/
+// hosted at https://steinbrennergit.github.io/unit-4-game/
+// repo at https://github.com/steinbrennergit/unit-4-game/
+
 $(document).ready(function () {
 
     var game = {
@@ -55,26 +59,23 @@ $(document).ready(function () {
             }
 
             var result = $("<p>").text("You dealt " + this.activePlayer.attackPower
-                + " damage, and received " + this.activeOpponent.attackPower + " damage.");
+                + " damage, and received " + this.activeOpponent.counterPower + " damage.");
             this.$attack_results.prepend(result);
 
             this.activePlayer.attack(this.activeOpponent);
             this.activeOpponent.counter(this.activePlayer);
 
             if (this.activePlayer.dead) {
+
                 this.resetCharacters();
                 this.resetCharacterDisplays();
                 this.resetTextDisplays();
 
-                if (this.activeOpponent.dead) {
-                    var tie = $("<p>").text("You and your opponent both fainted! Select new characters to try again.");
-                    this.$attack_results.prepend(tie);
-                } else {
-                    var loss = $("<p>").text("You lost! Select new characters to try again.");
-                    this.$attack_results.prepend(loss);
-                }
+                var loss = $("<p>").text("You lost! Select new characters to try again.");
+                this.$attack_results.prepend(loss);
 
             } else if (this.activeOpponent.dead) {
+
                 this.activeOpponent.hide();
                 this.activeOpponent = 0;
                 this.$opponent_stats.text("");
@@ -129,7 +130,7 @@ $(document).ready(function () {
 
         updateTextDisplays: function () {
             if (this.activeOpponent !== 0) {
-                this.opponent_stats = "HP: " + this.activeOpponent.health + ", ATK: " + this.activeOpponent.attackPower;
+                this.opponent_stats = "HP: " + this.activeOpponent.health + ", CTR: " + this.activeOpponent.counterPower;
                 this.$opponent_stats.text(this.opponent_stats);
             }
             if (this.activePlayer !== 0) {
